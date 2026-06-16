@@ -1,0 +1,30 @@
+Consolidated Threat Intelligence Blocklist — Stats
+Generated: 2026-06-16 08:12 UTC
+=======================================================
+
+Total unique entries: 54180
+Whitelisted (excluded): 0
+Feeds downloaded: 14/15
+Feeds failed: C2-Tracker All
+
+Feed                            Entries   Unique  Overlap  Category
+------------------------------ -------- -------- --------  ------------
+Spamhaus DROP                      1705       11     1694  hijacked
+Spamhaus DROPv6                      94       94        0  hijacked
+Feodo Tracker                         5        0        5  botnet
+SSL Blacklist                         0        0        0  malware
+C2-Tracker All                   FAILED        0        0  c2
+CINS Army                         15000    10720     4280  attacks
+DShield Block                        20        0       20  attacks
+FireHOL DShield 30d                  79       46       33  attacks
+Blocklist.de All                  27147    19561     7586  attacks
+GreenSnow                          6236     2492     3744  attacks
+Emerging Threats                   1720        3     1717  attacks
+OpenDBL Bruteforce                  593        9      584  attacks
+OpenDBL ET Known                    557       21      536  attacks
+Stamparm ipsum L3                 18148     5541    12607  aggregated
+OpenDBL Tor Exit                   1245      975      270  tor
+
+=======================================================
+Overlap = entries also found in other feeds
+Unique = entries found ONLY in this feed
