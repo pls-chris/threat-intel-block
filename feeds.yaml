@@ -1,0 +1,114 @@
+# feeds.yaml — Threat intelligence feed definitions
+#
+# Add or remove feeds here. The scraper will download each enabled feed,
+# parse IPs/CIDRs, deduplicate, and output a single consolidated list.
+#
+# Fields:
+#   name:     Display name for stats
+#   url:      Direct download URL (must return plain text)
+#   category: For stats grouping (malware, botnet, attacks, spam, tor, scanner, c2)
+#   format:   auto | plain | cidr | spamhaus | dshield | stamparm | csv_ip
+#             (auto works for most feeds)
+#   enabled:  true/false
+
+feeds:
+
+  # === Hijacked networks / worst-of-the-worst ===
+
+  - name: Spamhaus DROP
+    url: https://www.spamhaus.org/drop/drop.txt
+    category: hijacked
+    format: spamhaus
+    enabled: true
+
+  - name: Spamhaus DROPv6
+    url: https://www.spamhaus.org/drop/dropv6.txt
+    category: hijacked
+    format: spamhaus
+    enabled: true
+
+  # === Botnet C2 / Malware infrastructure ===
+
+  - name: Feodo Tracker
+    url: https://feodotracker.abuse.ch/downloads/ipblocklist.txt
+    category: botnet
+    format: plain
+    enabled: true
+
+  - name: SSL Blacklist
+    url: https://sslbl.abuse.ch/blacklist/sslipblacklist.txt
+    category: malware
+    format: plain
+    enabled: true
+
+  - name: C2-Tracker All
+    url: https://raw.githubusercontent.com/montysecurity/C2-Tracker/main/data/all.txt
+    category: c2
+    format: plain
+    enabled: true
+
+  # === Attack / brute force / scanner ===
+
+  - name: CINS Army
+    url: https://cinsscore.com/list/ci-badguys.txt
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: DShield Block
+    url: https://www.dshield.org/block.txt
+    category: attacks
+    format: dshield
+    enabled: true
+
+  - name: FireHOL DShield 30d
+    url: https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/dshield_30d.netset
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: Blocklist.de All
+    url: https://lists.blocklist.de/lists/all.txt
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: GreenSnow
+    url: https://blocklist.greensnow.co/greensnow.txt
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: Emerging Threats
+    url: https://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: OpenDBL Bruteforce
+    url: https://opendbl.net/lists/bruteforce.list
+    category: attacks
+    format: plain
+    enabled: true
+
+  - name: OpenDBL ET Known
+    url: https://opendbl.net/lists/etknown.list
+    category: attacks
+    format: plain
+    enabled: true
+
+  # === Aggregated / scored ===
+
+  - name: Stamparm ipsum L3
+    url: https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt
+    category: aggregated
+    format: stamparm
+    enabled: true
+
+  # === Anonymizers ===
+
+  - name: OpenDBL Tor Exit
+    url: https://opendbl.net/lists/tor-exit.list
+    category: tor
+    format: plain
+    enabled: true

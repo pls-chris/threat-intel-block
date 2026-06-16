@@ -1,0 +1,44 @@
+name: refresh-blocklist
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scraper/**'
+      - 'feeds.yaml'
+      - 'whitelist.txt'
+  schedule:
+    # Every day at 04:00 UTC
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Run consolidator
+        run: python scraper/consolidate.py
+
+      - name: Commit updated blocklist
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: |
+            blocklist.txt
+            stats.txt
+          default_author: github_actions
+          message: "refresh blocklist.txt [automated]"

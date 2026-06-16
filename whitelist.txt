@@ -1,0 +1,12 @@
+# whitelist.txt — IPs/CIDRs to exclude from the blocklist
+#
+# If a legitimate IP ends up in a threat feed (false positive),
+# add it here to exclude it from the consolidated list.
+#
+# Supports both single IPs and CIDR ranges.
+# Lines starting with # are comments.
+#
+# Example:
+# 203.0.113.50
+# 198.51.100.0/24
+
