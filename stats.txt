@@ -1,28 +1,28 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-06-17 08:55 UTC
+Generated: 2026-06-18 08:39 UTC
 =======================================================
 
-Total unique entries: 52968
+Total unique entries: 51326
 Whitelisted (excluded): 0
 Feeds downloaded: 14/15
 Feeds failed: C2-Tracker All
 
 Feed                            Entries   Unique  Overlap  Category
 ------------------------------ -------- -------- --------  ------------
-Spamhaus DROP                      1708        3     1705  hijacked
+Spamhaus DROP                      1708        0     1708  hijacked
 Spamhaus DROPv6                      94       94        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                   FAILED        0        0  c2
-CINS Army                         15000    10132     4868  attacks
-DShield Block                        20        0       20  attacks
-FireHOL DShield 30d                  79       48       31  attacks
-Blocklist.de All                  26338    18632     7706  attacks
-GreenSnow                          5986     2440     3546  attacks
-Emerging Threats                   1726        0     1726  attacks
-OpenDBL Bruteforce                  600        0      600  attacks
-OpenDBL ET Known                    591       18      573  attacks
-Stamparm ipsum L3                 18539     5296    13243  aggregated
+CINS Army                         15000    10113     4887  attacks
+DShield Block                        20        1       19  attacks
+FireHOL DShield 30d                  79       47       32  attacks
+Blocklist.de All                  25188    17299     7889  attacks
+GreenSnow                          5765     2374     3391  attacks
+Emerging Threats                   1729        0     1729  attacks
+OpenDBL Bruteforce                  606        3      603  attacks
+OpenDBL ET Known                    599       12      587  attacks
+Stamparm ipsum L3                 18236     5042    13194  aggregated
 OpenDBL Tor Exit                   1242      950      292  tor
 
 =======================================================
