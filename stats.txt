@@ -1,29 +1,29 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-06-18 08:39 UTC
+Generated: 2026-06-19 09:01 UTC
 =======================================================
 
-Total unique entries: 51326
+Total unique entries: 49683
 Whitelisted (excluded): 0
 Feeds downloaded: 14/15
 Feeds failed: C2-Tracker All
 
 Feed                            Entries   Unique  Overlap  Category
 ------------------------------ -------- -------- --------  ------------
-Spamhaus DROP                      1708        0     1708  hijacked
+Spamhaus DROP                      1705        0     1705  hijacked
 Spamhaus DROPv6                      94       94        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                   FAILED        0        0  c2
-CINS Army                         15000    10113     4887  attacks
+CINS Army                         15000    10050     4950  attacks
 DShield Block                        20        1       19  attacks
 FireHOL DShield 30d                  79       47       32  attacks
-Blocklist.de All                  25188    17299     7889  attacks
-GreenSnow                          5765     2374     3391  attacks
-Emerging Threats                   1729        0     1729  attacks
-OpenDBL Bruteforce                  606        3      603  attacks
-OpenDBL ET Known                    599       12      587  attacks
-Stamparm ipsum L3                 18236     5042    13194  aggregated
-OpenDBL Tor Exit                   1242      950      292  tor
+Blocklist.de All                  23664    15870     7794  attacks
+GreenSnow                          5789     2387     3402  attacks
+Emerging Threats                   1730        3     1727  attacks
+OpenDBL Bruteforce                  622        4      618  attacks
+OpenDBL ET Known                    604       17      587  attacks
+Stamparm ipsum L3                 18100     4887    13213  aggregated
+OpenDBL Tor Exit                   1241      960      281  tor
 
 =======================================================
 Overlap = entries also found in other feeds
