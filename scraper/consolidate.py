@@ -30,6 +30,7 @@ FEEDS_FILE = ROOT_DIR / "feeds.yaml"
 BLOCKLIST_FILE = ROOT_DIR / "blocklist.txt"
 STATS_FILE = ROOT_DIR / "stats.txt"
 WHITELIST_FILE = ROOT_DIR / "whitelist.txt"
+CUSTOM_BLOCKLIST_FILE = ROOT_DIR / "custom_blocklist.txt"
 
 # Regex
 IPV4_RE = re.compile(
@@ -79,6 +80,30 @@ def load_whitelist():
             except ValueError:
                 errprint(f"  Whitelist: skipping invalid entry: {line}")
     return whitelist
+
+
+def load_custom_blocklist():
+    """Load manually added IPs/CIDRs from custom_blocklist.txt."""
+    entries = set()
+    if not CUSTOM_BLOCKLIST_FILE.exists():
+        return entries
+    with open(CUSTOM_BLOCKLIST_FILE) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            try:
+                if "/" in line:
+                    net = ipaddress.ip_network(line, strict=False)
+                    if not net.is_private and not net.is_loopback:
+                        entries.add(str(net))
+                else:
+                    ip = ipaddress.ip_address(line)
+                    if ip.is_global and not ip.is_multicast:
+                        entries.add(str(ip))
+            except ValueError:
+                errprint(f"  Custom blocklist: skipping invalid entry: {line}")
+    return entries
 
 
 def download_feed(feed):
@@ -316,6 +341,16 @@ def main():
             provenance[entry].add(name)
 
     errprint(f"\nTotal raw entries: {len(all_entries)}")
+
+    # Merge custom blocklist
+    custom_entries = load_custom_blocklist()
+    if custom_entries:
+        custom_new = custom_entries - all_entries
+        for entry in custom_entries:
+            all_entries.add(entry)
+            provenance[entry].add("Custom blocklist")
+        errprint(f"Custom blocklist: {len(custom_entries)} entries "
+                 f"({len(custom_new)} new)")
 
     # Apply whitelist
     whitelisted_count = 0

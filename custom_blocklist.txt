@@ -1,0 +1,27 @@
+# custom_blocklist.txt — Manually added IPs/CIDRs
+#
+# Add IPs here that aren't covered by the automated feeds.
+# Typical use cases:
+#   - Incident-specific IOCs from CERT/CSIRT advisories
+#   - Threat intel shared by sector ISACs or NIS2 coordination groups
+#   - IPs from vendor security bulletins (e.g. FortiBleed infrastructure)
+#   - Indicators from internal threat hunting
+#
+# Format: one IPv4/IPv6 address or CIDR per line.
+# Lines starting with # are comments.
+# Use comments to document the source and date for each group.
+#
+# These entries are merged into blocklist.txt on every run and
+# tracked as "Custom blocklist" in stats.txt.
+#
+# Example:
+#
+# --- FortiBleed C2 infrastructure (SOCRadar, June 2026) ---
+# 198.51.100.10
+# 203.0.113.0/24
+#
+# --- CERT-XX advisory 2026-042 ---
+# 192.0.2.50
+
+# --- Add your entries below ---
+

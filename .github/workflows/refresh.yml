@@ -6,6 +6,7 @@ on:
       - 'scraper/**'
       - 'feeds.yaml'
       - 'whitelist.txt'
+      - 'custom_blocklist.txt'
   schedule:
     # Every day at 04:00 UTC
     - cron: "0 4 * * *"
