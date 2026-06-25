@@ -41,8 +41,8 @@ feeds:
     format: plain
     enabled: true
 
-  - name: C2-Tracker All
-    url: https://raw.githubusercontent.com/montysecurity/C2-Tracker/main/data/all.txt
+ - name: C2-Tracker All
+    url: https://raw.githubusercontent.com/JMousqueton/C2-Tracker/main/data/all.txt
     category: c2
     format: plain
     enabled: true
