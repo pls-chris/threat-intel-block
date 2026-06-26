@@ -404,6 +404,7 @@ def main():
         f.write(f"Feeds downloaded: {len(feeds) - len(feed_errors)}/{len(feeds)}\n")
         if feed_errors:
             f.write(f"Feeds failed: {', '.join(feed_errors.keys())}\n")
+        f.write(f"Custom blocklist: {len(custom_entries)} entries\n")
         f.write(f"\n")
 
         f.write(f"{'Feed':<30} {'Entries':>8} {'Unique':>8} {'Overlap':>8}  Category\n")
@@ -418,6 +419,15 @@ def main():
             category = feed.get("category", "")
             status = f"{len(entries):>8}" if name not in feed_errors else "  FAILED"
             f.write(f"{name:<30} {status} {unique:>8} {overlap:>8}  {category}\n")
+
+        # Custom blocklist stats
+        if custom_entries:
+            custom_unique = sum(1 for e in custom_entries
+                                if e in final_entries
+                                and len(provenance.get(e, set())) == 1)
+            custom_overlap = overlap_counts.get("Custom blocklist", 0)
+            f.write(f"{'Custom blocklist':<30} {len(custom_entries):>8} "
+                    f"{custom_unique:>8} {custom_overlap:>8}  manual\n")
 
         f.write(f"\n{'=' * 55}\n")
         f.write(f"Overlap = entries also found in other feeds\n")
