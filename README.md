@@ -4,7 +4,7 @@ A daily-updated **consolidated threat intelligence IP blocklist** built from mul
 
 ## How it works
 
-A CI/CD pipeline downloads all feeds defined in `feeds.yaml`, parses IPs and CIDR ranges across multiple formats, deduplicates, applies a whitelist for false positive exclusions, and outputs a single `blocklist.txt`.
+A CI/CD pipeline downloads all feeds defined in `feeds.yaml`, parses IPs and CIDR ranges across multiple formats, merges manually added IOCs from `custom_blocklist.txt`, deduplicates, applies a whitelist for false positive exclusions, and outputs a single `blocklist.txt`.
 
 Stats track per-feed health: entry counts, unique contributions, and overlap — so you can see which feeds are pulling their weight and catch any that go stale.
 
@@ -12,6 +12,7 @@ Stats track per-feed health: entry counts, unique contributions, and overlap —
 
 - `blocklist.txt` — Consolidated blocklist. One IP or CIDR per line. Point your firewall here.
 - `feeds.yaml` — Feed definitions. Add, remove, or disable feeds without touching code.
+- `custom_blocklist.txt` — Manually added IPs/CIDRs (incident IOCs, CERT advisories, internal threat hunting).
 - `whitelist.txt` — IPs/CIDRs to exclude (false positives, your own infrastructure).
 - `stats.txt` — Per-feed breakdown with unique/overlap analysis.
 
@@ -22,7 +23,7 @@ Stats track per-feed health: entry counts, unique contributions, and overlap —
 | Spamhaus DROP / DROPv6 | Hijacked networks | Worst-of-the-worst netblocks |
 | abuse.ch Feodo Tracker | Botnet C2 | Feodo/Dridex/TrickBot/QakBot C2 servers |
 | abuse.ch SSL Blacklist | Malware | Malicious SSL connections |
-| C2-Tracker | C2 infrastructure | Cobalt Strike, Sliver, Metasploit, Brute Ratel |
+| C2-Tracker (JMousqueton) | C2 infrastructure | Cobalt Strike, Sliver, Metasploit, Brute Ratel |
 | CINS Army | Attacks | Sentinel-detected attackers |
 | DShield / DShield 30d | Attacks | Top attackers (SANS ISC) |
 | Blocklist.de | Attacks | Community-reported attackers |
@@ -43,7 +44,7 @@ https://raw.githubusercontent.com/pls-chris/threat-intel-block/main/blocklist.tx
 
 Set it to refresh daily to match the update schedule.
 
-Create a rule blocking all inbound traffic from the alias to your network. If you have multiple internal interfaces, use a floating/global rule. For outbound blocking as well (prevents compromised internal hosts from reaching C2), add a second rule blocking LAN → alias.
+Create a rule blocking all inbound traffic from the alias to your network. For outbound blocking as well (prevents compromised internal hosts from reaching C2), add a second rule blocking LAN → alias. If you have multiple internal interfaces (VLANs, guest networks, IoT segments), use a floating/global rule to apply it across all of them at once.
 
 ## Managing feeds
 
@@ -65,7 +66,25 @@ Supported formats: `plain` (most feeds), `spamhaus`, `dshield`, `stamparm`, `aut
 
 Set `enabled: false` — the feed stays in config but is skipped during scraping.
 
-### Handling false positives
+## Adding manual IOCs
+
+For incident-specific indicators not covered by automated feeds — such as IOCs from CERT/CSIRT advisories, NIS2 coordination groups, vendor security bulletins, or internal threat hunting — add them to `custom_blocklist.txt`:
+
+```
+# --- FortiBleed C2 infrastructure (SOCRadar STRU, June 2026) ---
+85.11.187.8
+193.8.187.42
+194.113.39.71
+
+# --- CERT-XX advisory 2026-042 ---
+203.0.113.50
+```
+
+Use comment headers to document the source and date for each group. These entries are merged into `blocklist.txt` on every run and tracked separately as "Custom blocklist" in `stats.txt`.
+
+Commit and push — the workflow triggers automatically and merges them into the consolidated blocklist on the next run.
+
+## Handling false positives
 
 If a legitimate IP appears in the blocklist, add it to `whitelist.txt`:
 
@@ -78,7 +97,7 @@ Supports both single IPs and CIDR ranges.
 
 ## Update schedule
 
-The workflow runs **daily at 04:00 UTC** via GitHub Actions, plus on any push that changes the scraper code, feed config, or whitelist. Manual trigger available via the Actions tab.
+The workflow runs **daily at 04:00 UTC** via GitHub Actions, plus on any push that changes the scraper code, feed config, custom blocklist, or whitelist. Manual trigger available via the Actions tab.
 
 ## Running locally
 
