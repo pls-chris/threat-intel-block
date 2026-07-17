@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-07-16 06:11 UTC
+Generated: 2026-07-17 06:09 UTC
 =======================================================
 
-Total unique entries: 52835
+Total unique entries: 55341
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 257 entries
@@ -14,16 +14,16 @@ Spamhaus DROPv6                      93       93        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000    10279     4721  attacks
-DShield Block                        20        1       19  attacks
-FireHOL DShield 30d                  77       41       36  attacks
-Blocklist.de All                  24119    16889     7230  attacks
-GreenSnow                          4405     2252     2153  attacks
+CINS Army                         15000    10057     4943  attacks
+DShield Block                        20        2       18  attacks
+FireHOL DShield 30d                  78       43       35  attacks
+Blocklist.de All                  27616    19737     7879  attacks
+GreenSnow                          3919     1926     1993  attacks
 Emerging Threats                   1701        0     1701  attacks
 OpenDBL Bruteforce                  582        0      582  attacks
-OpenDBL ET Known                    613       43      570  attacks
-Stamparm ipsum L3                 16079     3893    12186  aggregated
-OpenDBL Tor Exit                   1400     1190      210  tor
+OpenDBL ET Known                    584       25      559  attacks
+Stamparm ipsum L3                 16077     3516    12561  aggregated
+OpenDBL Tor Exit                   1406     1180      226  tor
 Custom blocklist                    257      257        0  manual
 
 =======================================================
