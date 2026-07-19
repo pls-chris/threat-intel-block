@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-07-19 06:14 UTC
+Generated: 2026-07-19 06:24 UTC
 =======================================================
 
-Total unique entries: 54790
+Total unique entries: 54783
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -18,11 +18,11 @@ CINS Army                         15000     9141     5859  attacks
 DShield Block                        20        1       19  attacks
 FireHOL DShield 30d                  78       47       31  attacks
 Blocklist.de All                  25640    17959     7681  attacks
-GreenSnow                          3701     2130     1571  attacks
+GreenSnow                          3695     2123     1572  attacks
 Emerging Threats                   1700        1     1699  attacks
 OpenDBL Bruteforce                  580        1      579  attacks
 OpenDBL ET Known                    578       40      538  attacks
-Stamparm ipsum L3                 18298     4645    13653  aggregated
+Stamparm ipsum L3                 18298     4644    13654  aggregated
 OpenDBL Tor Exit                   1422     1181      241  tor
 Custom blocklist                    256      256        0  manual
 
