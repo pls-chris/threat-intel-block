@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-08-24 04:36 UTC
+Generated: 2026-08-25 04:31 UTC
 =======================================================
 
-Total unique entries: 52812
+Total unique entries: 52407
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -14,17 +14,17 @@ Spamhaus DROPv6                      92       92        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3435        2  c2
-CINS Army                         15000     9966     5034  attacks
+CINS Army                         15000    10304     4696  attacks
 DShield Block                        20        0       20  attacks
-FireHOL DShield 30d                  81       42       39  attacks
-Blocklist.de All                  26028    20196     5832  attacks
-GreenSnow                          3064     1828     1236  attacks
-Emerging Threats                   1723        1     1722  attacks
-OpenDBL Bruteforce                  551        0      551  attacks
-OpenDBL ET Known                    544       26      518  attacks
-Stamparm ipsum L3                 13562     2707    10855  aggregated
-OpenDBL Tor Exit                   1400     1188      212  tor
-Custom blocklist                    256      256        0  manual
+FireHOL DShield 30d                  80       48       32  attacks
+Blocklist.de All                  25141    19165     5976  attacks
+GreenSnow                          3352     2067     1285  attacks
+Emerging Threats                   1724        3     1721  attacks
+OpenDBL Bruteforce                  547        0      547  attacks
+OpenDBL ET Known                    550       15      535  attacks
+Stamparm ipsum L3                 13606     2947    10659  aggregated
+OpenDBL Tor Exit                   1399     1153      246  tor
+Custom blocklist                    256      255        1  manual
 
 =======================================================
 Overlap = entries also found in other feeds
