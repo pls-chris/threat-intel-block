@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-09-19 08:25 UTC
+Generated: 2026-09-20 08:57 UTC
 =======================================================
 
-Total unique entries: 62723
+Total unique entries: 63356
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -13,17 +13,17 @@ Spamhaus DROP                      1712        1     1711  hijacked
 Spamhaus DROPv6                      92       92        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
-C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000     7281     7719  attacks
+C2-Tracker All                     3437     3435        2  c2
+CINS Army                         15000     7426     7574  attacks
 DShield Block                        20        1       19  attacks
-FireHOL DShield 30d                  81       50       31  attacks
-Blocklist.de All                  33128    25117     8011  attacks
-GreenSnow                          5725     2288     3437  attacks
-Emerging Threats                   1733        2     1731  attacks
-OpenDBL Bruteforce                  694        3      691  attacks
-OpenDBL ET Known                    675       10      665  attacks
-Stamparm ipsum L3                 20677     4963    15714  aggregated
-OpenDBL Tor Exit                   1364     1122      242  tor
+FireHOL DShield 30d                  79       48       31  attacks
+Blocklist.de All                  33535    25297     8238  attacks
+GreenSnow                          5902     2228     3674  attacks
+Emerging Threats                   1733        3     1730  attacks
+OpenDBL Bruteforce                  692        4      688  attacks
+OpenDBL ET Known                    675       25      650  attacks
+Stamparm ipsum L3                 21127     5212    15915  aggregated
+OpenDBL Tor Exit                   1362     1091      271  tor
 Custom blocklist                    256      256        0  manual
 
 =======================================================
