@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-09-23 08:58 UTC
+Generated: 2026-09-24 08:53 UTC
 =======================================================
 
-Total unique entries: 62311
+Total unique entries: 61818
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -14,16 +14,16 @@ Spamhaus DROPv6                      92       92        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3434        3  c2
-CINS Army                         15000     8454     6546  attacks
-DShield Block                        20        2       18  attacks
-FireHOL DShield 30d                  71       41       30  attacks
-Blocklist.de All                  32897    25214     7683  attacks
-GreenSnow                          5903     2539     3364  attacks
-Emerging Threats                   1737        4     1733  attacks
-OpenDBL Bruteforce                  693        2      691  attacks
-OpenDBL ET Known                    690       15      675  attacks
-Stamparm ipsum L3                 18842     4527    14315  aggregated
-OpenDBL Tor Exit                   1374     1084      290  tor
+CINS Army                         15000     8194     6806  attacks
+DShield Block                        20        0       20  attacks
+FireHOL DShield 30d                  70       37       33  attacks
+Blocklist.de All                  32216    24447     7769  attacks
+GreenSnow                          5612     2350     3262  attacks
+Emerging Threats                   1734        2     1732  attacks
+OpenDBL Bruteforce                  678        2      676  attacks
+OpenDBL ET Known                    686       17      669  attacks
+Stamparm ipsum L3                 19549     4916    14633  aggregated
+OpenDBL Tor Exit                   1370     1138      232  tor
 Custom blocklist                    256      255        1  manual
 
 =======================================================
