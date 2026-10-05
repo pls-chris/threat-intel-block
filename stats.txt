@@ -1,29 +1,29 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-10-04 10:19 UTC
+Generated: 2026-10-05 11:03 UTC
 =======================================================
 
-Total unique entries: 42214
+Total unique entries: 43129
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
 
 Feed                            Entries   Unique  Overlap  Category
 ------------------------------ -------- -------- --------  ------------
-Spamhaus DROP                      1691        0     1691  hijacked
+Spamhaus DROP                      1640        0     1640  hijacked
 Spamhaus DROPv6                      91       91        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000     8955     6045  attacks
+CINS Army                         15000     9122     5878  attacks
 DShield Block                        20        0       20  attacks
-FireHOL DShield 30d                  74       40       34  attacks
-Blocklist.de All                   7967     7966        1  attacks
-GreenSnow                          3134     1713     1421  attacks
-Emerging Threats                   1716        1     1715  attacks
-OpenDBL Bruteforce                  608       13      595  attacks
-OpenDBL ET Known                    621       49      572  attacks
-Stamparm ipsum L3                 16495     8585     7910  aggregated
-OpenDBL Tor Exit                   1398     1176      222  tor
+FireHOL DShield 30d                  73       42       31  attacks
+Blocklist.de All                   7780     7747       33  attacks
+GreenSnow                          4391     2363     2028  attacks
+Emerging Threats                   1716       52     1664  attacks
+OpenDBL Bruteforce                  603       21      582  attacks
+OpenDBL ET Known                    621       60      561  attacks
+Stamparm ipsum L3                 16812     8480     8332  aggregated
+OpenDBL Tor Exit                   1382     1163      219  tor
 Custom blocklist                    256      255        1  manual
 
 =======================================================
