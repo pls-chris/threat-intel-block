@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-10-05 11:03 UTC
+Generated: 2026-10-06 10:56 UTC
 =======================================================
 
-Total unique entries: 43129
+Total unique entries: 48464
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -13,18 +13,18 @@ Spamhaus DROP                      1640        0     1640  hijacked
 Spamhaus DROPv6                      91       91        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
-C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000     9122     5878  attacks
+C2-Tracker All                     3437     3435        2  c2
+CINS Army                         15000     9494     5506  attacks
 DShield Block                        20        0       20  attacks
-FireHOL DShield 30d                  73       42       31  attacks
-Blocklist.de All                   7780     7747       33  attacks
-GreenSnow                          4391     2363     2028  attacks
-Emerging Threats                   1716       52     1664  attacks
-OpenDBL Bruteforce                  603       21      582  attacks
-OpenDBL ET Known                    621       60      561  attacks
-Stamparm ipsum L3                 16812     8480     8332  aggregated
-OpenDBL Tor Exit                   1382     1163      219  tor
-Custom blocklist                    256      255        1  manual
+FireHOL DShield 30d                  73       39       34  attacks
+Blocklist.de All                  19435    13301     6134  attacks
+GreenSnow                          3661     1816     1845  attacks
+Emerging Threats                   1714       51     1663  attacks
+OpenDBL Bruteforce                  603        2      601  attacks
+OpenDBL ET Known                    599       15      584  attacks
+Stamparm ipsum L3                 16660     4788    11872  aggregated
+OpenDBL Tor Exit                   1366     1177      189  tor
+Custom blocklist                    256      251        5  manual
 
 =======================================================
 Overlap = entries also found in other feeds
