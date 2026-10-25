@@ -1,8 +1,8 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-10-24 08:31 UTC
+Generated: 2026-10-25 08:51 UTC
 =======================================================
 
-Total unique entries: 57363
+Total unique entries: 55343
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
@@ -13,17 +13,17 @@ Spamhaus DROP                      1687        1     1686  hijacked
 Spamhaus DROPv6                      91       91        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
-C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000     7922     7078  attacks
-DShield Block                        20        3       17  attacks
-FireHOL DShield 30d                  76       44       32  attacks
-Blocklist.de All                  27750    20709     7041  attacks
-GreenSnow                          5301     2205     3096  attacks
-Emerging Threats                   1711        1     1710  attacks
-OpenDBL Bruteforce                  499        2      497  attacks
-OpenDBL ET Known                    482        3      479  attacks
-Stamparm ipsum L3                 19670     5223    14447  aggregated
-OpenDBL Tor Exit                   1217      911      306  tor
+C2-Tracker All                     3437     3435        2  c2
+CINS Army                         15000     7944     7056  attacks
+DShield Block                        20        4       16  attacks
+FireHOL DShield 30d                  77       48       29  attacks
+Blocklist.de All                  25238    18472     6766  attacks
+GreenSnow                          5214     2085     3129  attacks
+Emerging Threats                   1711        3     1708  attacks
+OpenDBL Bruteforce                  509        3      506  attacks
+OpenDBL ET Known                    482        5      477  attacks
+Stamparm ipsum L3                 19922     5727    14195  aggregated
+OpenDBL Tor Exit                   1212      931      281  tor
 Custom blocklist                    256      255        1  manual
 
 =======================================================
