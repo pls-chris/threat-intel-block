@@ -1,10 +1,11 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-10-25 08:51 UTC
+Generated: 2026-10-26 09:32 UTC
 =======================================================
 
-Total unique entries: 55343
+Total unique entries: 51578
 Whitelisted (excluded): 0
-Feeds downloaded: 15/15
+Feeds downloaded: 14/15
+Feeds failed: GreenSnow
 Custom blocklist: 256 entries
 
 Feed                            Entries   Unique  Overlap  Category
@@ -14,16 +15,16 @@ Spamhaus DROPv6                      91       91        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3435        2  c2
-CINS Army                         15000     7944     7056  attacks
-DShield Block                        20        4       16  attacks
-FireHOL DShield 30d                  77       48       29  attacks
-Blocklist.de All                  25238    18472     6766  attacks
-GreenSnow                          5214     2085     3129  attacks
+CINS Army                         15000     8584     6416  attacks
+DShield Block                        20        1       19  attacks
+FireHOL DShield 30d                  80       46       34  attacks
+Blocklist.de All                  23248    16329     6919  attacks
+GreenSnow                        FAILED        0        0  attacks
 Emerging Threats                   1711        3     1708  attacks
-OpenDBL Bruteforce                  509        3      506  attacks
-OpenDBL ET Known                    482        5      477  attacks
-Stamparm ipsum L3                 19922     5727    14195  aggregated
-OpenDBL Tor Exit                   1212      931      281  tor
+OpenDBL Bruteforce                  507        7      500  attacks
+OpenDBL ET Known                    482        8      474  attacks
+Stamparm ipsum L3                 19862     6505    13357  aggregated
+OpenDBL Tor Exit                   1211      968      243  tor
 Custom blocklist                    256      255        1  manual
 
 =======================================================
