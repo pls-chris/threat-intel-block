@@ -1,29 +1,30 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-11-13 11:45 UTC
+Generated: 2026-11-14 11:07 UTC
 =======================================================
 
-Total unique entries: 53820
+Total unique entries: 51805
 Whitelisted (excluded): 0
-Feeds downloaded: 15/15
+Feeds downloaded: 14/15
+Feeds failed: GreenSnow
 Custom blocklist: 256 entries
 
 Feed                            Entries   Unique  Overlap  Category
 ------------------------------ -------- -------- --------  ------------
-Spamhaus DROP                      1757        2     1755  hijacked
+Spamhaus DROP                      1758        1     1757  hijacked
 Spamhaus DROPv6                      90       90        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3436        1  c2
-CINS Army                         15000     9692     5308  attacks
+CINS Army                         15000     9491     5509  attacks
 DShield Block                        20        1       19  attacks
 FireHOL DShield 30d                  78       45       33  attacks
-Blocklist.de All                  24143    18029     6114  attacks
-GreenSnow                          1762      679     1083  attacks
-Emerging Threats                   1778        0     1778  attacks
-OpenDBL Bruteforce                  587        0      587  attacks
-OpenDBL ET Known                    566       14      552  attacks
-Stamparm ipsum L3                 18640     6693    11947  aggregated
-OpenDBL Tor Exit                   1254      877      377  tor
+Blocklist.de All                  23657    17237     6420  attacks
+GreenSnow                        FAILED        0        0  attacks
+Emerging Threats                   1781        1     1780  attacks
+OpenDBL Bruteforce                  577        0      577  attacks
+OpenDBL ET Known                    584       19      565  attacks
+Stamparm ipsum L3                 18337     6150    12187  aggregated
+OpenDBL Tor Exit                   1260      894      366  tor
 Custom blocklist                    256      256        0  manual
 
 =======================================================
