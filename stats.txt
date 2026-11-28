@@ -1,29 +1,29 @@
 Consolidated Threat Intelligence Blocklist — Stats
-Generated: 2026-11-27 13:21 UTC
+Generated: 2026-11-28 12:36 UTC
 =======================================================
 
-Total unique entries: 55089
+Total unique entries: 54376
 Whitelisted (excluded): 0
 Feeds downloaded: 15/15
 Custom blocklist: 256 entries
 
 Feed                            Entries   Unique  Overlap  Category
 ------------------------------ -------- -------- --------  ------------
-Spamhaus DROP                      1736        0     1736  hijacked
+Spamhaus DROP                      1726        0     1726  hijacked
 Spamhaus DROPv6                      90       90        0  hijacked
 Feodo Tracker                         5        0        5  botnet
 SSL Blacklist                         0        0        0  malware
 C2-Tracker All                     3437     3435        2  c2
-CINS Army                         15000     9812     5188  attacks
-DShield Block                        20        3       17  attacks
-FireHOL DShield 30d                  76       44       32  attacks
-Blocklist.de All                  25878    19525     6353  attacks
-GreenSnow                          2195     1090     1105  attacks
-Emerging Threats                   1760        0     1760  attacks
-OpenDBL Bruteforce                  579        0      579  attacks
-OpenDBL ET Known                    578       16      562  attacks
-Stamparm ipsum L3                 17606     5981    11625  aggregated
-OpenDBL Tor Exit                   1264     1142      122  tor
+CINS Army                         15000     9803     5197  attacks
+DShield Block                        20        1       19  attacks
+FireHOL DShield 30d                  77       46       31  attacks
+Blocklist.de All                  25192    18550     6642  attacks
+GreenSnow                          2281     1054     1227  attacks
+Emerging Threats                   1760       12     1748  attacks
+OpenDBL Bruteforce                  582        0      582  attacks
+OpenDBL ET Known                    577       14      563  attacks
+Stamparm ipsum L3                 17845     5993    11852  aggregated
+OpenDBL Tor Exit                   1261     1126      135  tor
 Custom blocklist                    256      256        0  manual
 
 =======================================================
